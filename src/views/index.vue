@@ -1,61 +1,23 @@
+<style scoped lang="less">
+    @import "../styles/index.less";
+</style>
 <style scoped>
-    .index {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-        background-color: #141a48;
-        background-image: url(https://file.iviewui.com/dist/ddb81d457e66ab31d3a2e7726a5b793a.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-    }
 
-    .index h1 {
-        height: 150px;
-    }
-
-    .index h1 img {
-        height: 100%;
-    }
-
-    .index h2 {
-        color: #666;
-        margin-bottom: 200px;
-    }
-
-    .index h2 p {
-        margin: 0 0 50px;
-    }
-
-    .index .ivu-row-flex {
-        height: 100%;
-    }
-    #indexLizi{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        overflow: hidden;
-    }
-    p{
-        color: white;
-    }
 </style>
 <template>
     <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <Col span="24">
-                <h1>
-                    <img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
-                </h1>
-                <h2>
-                    <p>iView首页动画Demo!</p>
-                </h2>
-            </Col>
-        </Row>
+        <div class="photo">
+            <img class="photo" src="../images/myself.png">
+        </div>
+        <div class="list">
+            <router-link :to="'/docs/guide/introduce'">{{  nav1 }}</router-link>
+            <router-link :to="'/docs/guide/install'">{{ nav2 }}</router-link>
+            <router-link :to="'/docs/practice/case'">{{ nav3 }}</router-link>
+            <a href="https://github.com/gytai" target="_blank">
+                <Icon type="social-github"></Icon>
+                GitHub
+            </a>
+        </div>
         <div id="indexLizi"></div>
     </div>
 
@@ -64,6 +26,13 @@
 <script>
     import THREE from '../libs/three/three';
     export default {
+        data(){
+            return{
+                nav1:'简历',
+                nav2:'作品集',
+                nav3:'技术栈'
+            }
+        },
         methods: {
             liziInit () {
                 var SCREEN_WIDTH = window.innerWidth;

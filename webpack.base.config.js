@@ -1,26 +1,43 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+/**
+ * Created by aresn on 16/7/5.
+ */
+
+var path = require('path');
+var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+function resolve (dir) {
+    return path.join(__dirname, '..', dir)
+}
 
 module.exports = {
+    // 入口
     entry: {
         main: './src/main',
-        vendors: './src/vendors'
+        vendors: ['vue', 'vue-router', 'iview', 'highlightjs/highlight.pack.js', 'clipboard']
     },
+    // 输出
     output: {
         path: path.join(__dirname, './dist')
     },
+    // 加载器
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-
-                        css: ExtractTextPlugin.extract({
-                            use: ['css-loader', 'autoprefixer-loader'],
+                        less: ExtractTextPlugin.extract({
+                            use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
                             fallback: 'vue-style-loader'
-                        })
+                        }),
+                        css: ExtractTextPlugin.extract({
+                            use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
+                            fallback: 'vue-style-loader'
+                        }),
+                    },
+                    postLoaders: {
+                        html: 'babel-loader'
                     }
                 }
             },
@@ -36,11 +53,25 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize', 'autoprefixer-loader'],
+                    use: 'css-loader?minimize',
                     fallback: 'style-loader'
                 })
             },
-
+            {
+                test: /\.less/,
+                use: ExtractTextPlugin.extract({
+                    use: 'less-loader',
+                    fallback: 'style-loader'
+                })
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader?sourceMap'
+                ]
+            },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=1024'
@@ -54,7 +85,11 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue'],
         alias: {
-            'vue': 'vue/dist/vue.esm.js'
+            'hljs': 'highlightjs/highlight.pack.js',
+            'iCode': '../../components/code.vue',
+            // 'vue': 'vue/dist/vue.esm.js',
+            'vue': 'vue/dist/vue.runtime.js'
+            // '@': resolve('src')
         }
     }
 };

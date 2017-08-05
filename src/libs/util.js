@@ -5,7 +5,7 @@ let util = {
 
 };
 util.title = function(title) {
-    title = title ? title + ' - Home' : 'iView首页动画Demo';
+    title = title ? title + ' - Home' : '邰广银个人站';
     window.document.title = title;
 };
 

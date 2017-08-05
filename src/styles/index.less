@@ -6,35 +6,12 @@
     left: 0;
     text-align: center;
     background-color: #141a48;
-    background-image: url("../images/bg-new.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
-
-    h1{
-        img{
-            display: block;
-            margin: 0 auto;
-        }
-        .img-logo{
-            width: 90px;
-            height: 90px;
-        }
-        .img-name{
-            width: 90px;
-            height: 40px;
-            position: relative;
-            left: -5px;
-        }
-    }
-    h2{
-        color: #fff;
-        font-weight: normal;
-        margin-top: 50px;
-        font-size: 16px;
-    }
     .list{
-        margin: 40px 0 200px;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        margin: 340px 0 200px;
         a{
             color: #0099fb;
             font-size: 16px;
@@ -71,20 +48,19 @@
             }
         }
     }
-    .ivu-row-flex{
-        height: 100%;
+
+  .photo{
+    position: absolute;
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+    img{
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
     }
-    &-lang{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 10;
-        & span{
-            display: inline-block;
-            color: #fff;
-            cursor: pointer;
-        }
-    }
+  }
 }
 
 #indexLizi{
