@@ -303,7 +303,7 @@
     export default {
         data() {
             return {
-                value1: '1'
+                value1: 1
             }
         },
         mounted(){
