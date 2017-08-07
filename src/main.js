@@ -11,7 +11,11 @@ import VueI18n from 'vue-i18n';
 import Locales from './locale';
 import zhLocale from 'iview/src/locale/lang/zh-CN';
 import enLocale from 'iview/src/locale/lang/en-US';
+import 'animate.css'
+import 'vue-fullpage/vue-fullpage.css'
+import VueFullpage from 'vue-fullpage'
 
+Vue.use(VueFullpage);
 Vue.use(VueRouter);
 
 Vue.use(VueI18n);

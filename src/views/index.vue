@@ -10,9 +10,9 @@
             <img class="photo" src="../images/myself.png">
         </div>
         <div class="list">
-            <router-link :to="'/docs/guide/introduce'">{{  nav1 }}</router-link>
-            <router-link :to="'/docs/guide/install'">{{ nav2 }}</router-link>
-            <router-link :to="'/docs/practice/case'">{{ nav3 }}</router-link>
+            <router-link :to="'/resume'">{{  nav1 }}</router-link>
+            <router-link :to="'/product'">{{ nav2 }}</router-link>
+            <a href="#" @click="tekclick">{{ nav3 }}</a>
             <a href="https://github.com/gytai" target="_blank">
                 <Icon type="social-github"></Icon>
                 GitHub
@@ -140,6 +140,9 @@
 
                     count += 0.1;
                 }
+            },
+            tekclick(){
+                this.$Message.success('^_^==全栈工程师==^_^');
             }
         },
         mounted () {
