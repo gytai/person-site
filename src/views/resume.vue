@@ -150,18 +150,33 @@
                 </p>
             </div>
             <div class="section " id="section1">
-                <Collapse style="background: transparent;">
+                <Collapse style="background: transparent;" v-model="value1">
                     <Panel name="1">
                         前端开发
-                        <p slot="content">6年前端开发经验，掌握HTML,JAVASCRIPT,CSS3,Jquery等前端知识；熟悉各类前端框架例如Bootstrap，Sui，vue等,熟悉前端构建工具webpack，gulp 等。</p>
+                        <p slot="content">
+                            6年前端开发经验<br>
+                            掌握HTML,JAVASCRIPT,CSS3,Jquery等前端知识<br>
+                            熟悉各类前端框架例如Bootstrap，Sui，Vue等<br>
+                            熟悉前端构建工具webpack，gulp 等。<br>
+                            熟悉网络协议，熟悉 http(s)协议；<br>
+                            熟悉 PC、Mobile 端主流浏览器兼容性及特性<br>
+                            熟悉 W3C 标准，对前后端分离、Web 语义化等有较为深刻的理解。<br>
+                        </p>
                     </Panel>
                     <Panel name="2">
                         服务器开发
-                        <p slot="content">4年后端开发经验，掌握NODEJS，PHP以及Python；熟悉关系型数据库SqlSevrer以及Mysql。熟悉NoSql（redis,MemCache）。熟悉负载均衡配置。</p>
+                        <p slot="content">
+                            4年后端开发经验，熟练掌握NODEJS，PHP以及Python；<br>
+                            熟悉关系型数据库SqlSevrer以及Mysql。熟悉NoSql（redis,MemCache）。<br>
+                            熟悉负载均衡配置。<br>
+                            熟悉 Linux 操作系统。<br>
+                            有过大流量、高并发 WEB 项目开发经验<br>
+                        </p>
                     </Panel>
                     <Panel name="3">
                         客户端开发
-                        <p slot="content">熟悉Java、C++、C#、C，熟悉安卓开发，熟悉Winform开发以及各类PC客户开发。熟悉WebApp开发。</p>
+                        <p slot="content">熟悉Java、C++、C#、C，熟悉安卓开发<br>
+                            熟悉Winform开发以及各类PC客户开发。熟悉WebApp开发。<br></p>
                     </Panel>
                     <Panel name="4">
                         团队管理
@@ -288,7 +303,7 @@
     export default {
         data() {
             return {
-
+                value1: '1'
             }
         },
         mounted(){
