@@ -5,6 +5,7 @@
         top: 0;
         width: 100%;
         height: 100%;
+        background: #00FF00 url(../images/bg.jpg) repeat;
     }
 
     #section0 img,
@@ -16,6 +17,9 @@
     }
     #section2 img{
         margin: 20px 0 0 52px;
+    }
+    #section3{
+        color: white;
     }
     #section3 img{
         bottom: 0px;
@@ -83,28 +87,6 @@
         color: white;
     }
 
-    #section1 ul{
-        list-style-type: none;
-    }
-    #section1 ul li{
-        border-bottom: 1px solid #F8F8F8;;
-        height: 30px;
-        line-height: 30px;
-
-    }
-    #section1 ul li a{
-
-        border-left: 3px solid #58DB5A;
-        padding-left: 8px;
-        text-decoration: none;
-        color: #666;
-    }
-
-    #section1 ul li a:hover{
-        color:#58DB5A;
-        cursor: pointer;
-    }
-
     #section1,#section2{
        text-align: left;
         color:white;
@@ -120,6 +102,27 @@
     .content{
         padding-left: 5px;
     }
+
+    dd:before {
+        position: absolute;
+        left: -15px;
+        top: 13px;
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: #000;
+        border-radius: 50%;
+    }
+
+    #section1 ul {
+        list-style-type:square;
+    }
+
+    #section1 {
+        font-size: 16px;
+        color:white;
+    }
+
 </style>
 <template>
     <div class="fullpage-container">
@@ -135,54 +138,48 @@
         <div id="fullpage">
             <div class="section active" id="section0">
                 <h1>个人简历</h1>
-                <h3>全栈工程师</h3>
                 <img class="photo" src="../images/myself.png">
-                <p>
+                <p style="font-size: 20px;">
                     姓名		:           邰广银<br>
-                    性别	    :           男<br>
-                    年龄		:           29<br>
-                    地点		:           合肥<br>
-                    学历		:           本科<br>
-                </p>
-                <p style="color: red;">
                     邮箱		:           taiguangyin@qq.com<br>
                     电话     ：          18656095251<br>
                 </p>
             </div>
             <div class="section " id="section1">
-                <Collapse style="background: transparent;" v-model="value1">
-                    <Panel name="1">
-                        前端开发
-                        <p slot="content">
-                            6年前端开发经验<br>
-                            掌握HTML,JAVASCRIPT,CSS3,Jquery等前端知识<br>
-                            熟悉各类前端框架例如Bootstrap，Sui，Vue等<br>
-                            熟悉前端构建工具webpack，gulp 等。<br>
-                            熟悉网络协议，熟悉 http(s)协议；<br>
-                            熟悉 PC、Mobile 端主流浏览器兼容性及特性<br>
-                            熟悉 W3C 标准，对前后端分离、Web 语义化等有较为深刻的理解。<br>
-                        </p>
-                    </Panel>
-                    <Panel name="2">
-                        服务器开发
-                        <p slot="content">
-                            4年后端开发经验，熟练掌握NODEJS，PHP以及Python；<br>
-                            熟悉关系型数据库SqlSevrer以及Mysql。熟悉NoSql（redis,MemCache）。<br>
-                            熟悉负载均衡配置。<br>
-                            熟悉 Linux 操作系统。<br>
-                            有过大流量、高并发 WEB 项目开发经验<br>
-                        </p>
-                    </Panel>
-                    <Panel name="3">
-                        客户端开发
-                        <p slot="content">熟悉Java、C++、C#、C，熟悉安卓开发<br>
-                            熟悉Winform开发以及各类PC客户开发。熟悉WebApp开发。<br></p>
-                    </Panel>
-                    <Panel name="4">
-                        团队管理
-                        <p slot="content">4年管理经验，团队合作良好，有较强的推动力。</p>
-                    </Panel>
-                </Collapse>
+                <div style="width: 540px;margin: 0 auto;">
+                    <h3>前端开发 </h3>
+                    <ul>
+                        <li>6年前端开发经验</li>
+                        <li>掌握HTML,JAVASCRIPT,CSS3,Jquery等前端知识</li>
+                        <li>熟悉各类前端框架例如Bootstrap，Sui，Vue等</li>
+                        <li>熟悉前端构建工具webpack，gulp 等。</li>
+                        <li>熟悉网络协议，熟悉 http(s)协议；</li>
+                        <li>熟悉 PC、Mobile 端主流浏览器兼容性及特性</li>
+                        <li>熟悉 W3C 标准，对前后端分离、Web 语义化等有较为深刻的理解。</li>
+                    </ul>
+                    <br>
+                    <h3>   服务器开发</h3>
+                    <ul>
+                        <li>4年后端开发经验，熟练掌握NODEJS，PHP以及Python。 </li>
+                        <li> 熟悉关系型数据库SqlSevrer以及Mysql。熟悉NoSql（redis,MemCache）。</li>
+                        <li>  熟悉负载均衡配置。 </li>
+                        <li>   熟悉 Linux 操作系统。 </li>
+                        <li>   有过大流量、高并发 WEB 项目开发经验 </li>
+
+                    </ul>
+                    <br>
+                    <h3> 客户端开发 </h3>
+                    <ul>
+                        <li>熟悉Java、C++、C#、C，熟悉安卓开发 </li>
+                        <li>  熟悉Winform开发以及各类PC客户开发。熟悉WebApp开发。<br></li>
+                    </ul>
+                    <br>
+                    <h3> 团队管理 </h3>
+                    <ul >
+                        <li>4年管理经验，团队合作良好，有较强的推动力。</li>
+                    </ul>
+                </div>
+
             </div>
             <div class="section" id="section2">
                 <div class="slide">
@@ -190,11 +187,11 @@
                         项目名称：半职<br>
                         项目职务：开发经理<br>
                         项目职责：负责整个项目的需求分析以及技术架构。<br>
-                        1.APP以及后端框架设计。
-                        2.后端接口开发以及管理系统核心开发。
-                        3.公众号页面开发以及优化。
-                        4.前端框架搭建
-                        5.服务器端架构
+                        1.APP以及后端框架设计。<br>
+                        2.后端接口开发以及管理系统核心开发。<br>
+                        3.公众号页面开发以及优化。<br>
+                        4.前端框架搭建<br>
+                        5.服务器端架构<br>
                         项目成果：半职APP完整上线，包括安卓、IOS，微信端以及管理平台和接口系统。技术栈使用nodejs。<br>
                     </div>
 
@@ -303,12 +300,11 @@
     export default {
         data() {
             return {
-                value1: 1
             }
         },
         mounted(){
             $('#fullpage').fullpage({
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#101139', '#ccddff'],
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
                 menu: '#menu',
                 scrollingSpeed: 1000
