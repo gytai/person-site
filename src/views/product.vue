@@ -15,7 +15,7 @@
                 <Icon type="ios-film-outline"></Icon>
                 半职
             </p>
-            <Carousel v-model="value1">
+            <Carousel>
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../images/product/p4-0.png" /></div>
                 </Carousel-item>
@@ -38,7 +38,7 @@
                 <Icon type="ios-film-outline"></Icon>
                 点点网
             </p>
-            <Carousel v-model="value1">
+            <Carousel>
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../images/product/p2-1.png" /></div>
                 </Carousel-item>
@@ -58,7 +58,7 @@
                 <Icon type="ios-film-outline"></Icon>
                 虚空念佛堂
             </p>
-            <Carousel v-model="value1">
+            <Carousel>
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../images/product/p3-1.png" /></div>
                 </Carousel-item>
@@ -78,7 +78,7 @@
                 <Icon type="ios-film-outline"></Icon>
                 乐房通
             </p>
-            <Carousel v-model="value1">
+            <Carousel>
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../images/product/p1-1.png" /></div>
                 </Carousel-item>
@@ -98,7 +98,7 @@
                 <Icon type="ios-film-outline"></Icon>
                 造物者
             </p>
-            <Carousel v-model="value1">
+            <Carousel>
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../images/product/p5-1.png" /></div>
                 </Carousel-item>
